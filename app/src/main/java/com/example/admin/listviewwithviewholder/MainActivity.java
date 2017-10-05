@@ -1,7 +1,9 @@
 package com.example.admin.listviewwithviewholder;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -35,11 +37,17 @@ public class MainActivity extends AppCompatActivity {
         personList.add( new Person( "Mac", "Myers" ));
         personList.add( new Person( "Jason", "Gomez" ));
         personList.add( new Person( "Joseph", "Casal" ));
+        personList.add( new Person( "Ryen", "Greene" ));
 
         PersonListAdapter psa = new PersonListAdapter( this, R.layout.list_view_item, personList);
 
         listView.setAdapter( psa );
 
+    }
+
+    public void goToSecond(View view) {
+        Intent intent = new Intent( this, RecycleActivity.class );
+        startActivity( intent );
     }
 }
 

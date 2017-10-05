@@ -16,5 +16,12 @@
         android:choiceMode="singleChoice"
         android:dividerHeight="@dimen/listViewDividerHeight"
         android:background="@color/colorListViewBackground"/>
+    
+    <Button
+        android:id="@+id/btnGoToSecond"
+        android:text="Part Two"
+        android:onClick="goToSecond"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>
